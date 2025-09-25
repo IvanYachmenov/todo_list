@@ -8,6 +8,7 @@ html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     transition: all 0.3s;
+    zoom: 1.4;
 }
 
 header {
@@ -36,7 +37,7 @@ h3 {
 }
 
 h1 {
-    transform: translateX(70px);
+    transform: translateX(70px) translateY(-2px);
     font-size: 20pt;
 }
 
@@ -371,4 +372,11 @@ body.menu-open header,
 body.menu-open main,
 body.menu-open footer {
     margin-left: 220px;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
