@@ -1,0 +1,374 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: cursive;
+    background-image: url("img/Like_ absolutesciencefiction.gif");
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    transition: all 0.3s;
+}
+
+header {
+    /*background: #61b390;*/
+    background-color: transparent;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 10pt;
+    height: 50px;
+    position: relative;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 {
+    font-family: cursive;
+}
+
+h1 {
+    transform: translateX(70px);
+    font-size: 20pt;
+}
+
+
+.header-right {
+    margin: 0;
+    align-items: center;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+}
+.header-right h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+header .capsule {
+    padding: 6px 14px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+.capsule {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 6px 12px;
+    border-radius: 999px;
+    box-shadow: inset 2px 2px 5px rgba(255,255,255,0.3),
+    inset -2px -2px 5px rgba(0,0,0,0.4);
+    white-space: nowrap;
+}
+
+/*
+
+*/
+.menu img {
+
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+/*
+    menu
+*/
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    height: 100%;
+    background: #025f4c;
+    color: white;
+    transition: left 0.3s;
+    padding-top: 60px;
+    z-index: 200;
+}
+#side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#side-menu li {
+    margin: 15px;
+}
+#side-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+main {
+    flex: 1;
+    padding: 20px 100px;
+    /*background: url("img/Like_ absolutesciencefiction.gif");*/
+    background-size: cover;
+}
+
+/*
+    list of tasks
+*/
+#task-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+    background: #bad8b6;
+    border: 1px solid #000;
+
+    min-height: calc(3 * 36px);
+}
+
+.task.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/*
+    input field
+*/
+#input-task {
+    border: 1px solid #000;
+    background: #bad8b6;
+    margin: 10px;
+    padding: 5px;
+    width: 70%;
+    max-width: 600px;
+    transform: translateX(40px);
+}
+
+footer {
+    /*background: #61b390;*/
+    color: black;
+    text-align: center;
+    font-size: small;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .capsule {
+    padding: 4px 12px;
+}
+
+/*
+    push
+*/
+#push-notification {
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    background: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    font-size: 14pt;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+#push-notification.show {
+    opacity: 1;
+}
+
+/* close-menu-button */
+#close-menu {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/*
+    delete-btn
+*/
+
+.delete-btn {
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    color: red;
+    font-size: 12pt;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.delete-btn::after {
+    content: "✖";
+    line-height: 1;
+}
+
+.delete-btn:hover {
+    color: darkred;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 4px 0;
+}
+
+#task-list li span.task {
+    flex: 1;
+}
+
+/*
+    border to circle
+*/
+button,
+input,
+textarea,
+select {
+    border-radius: 12px;
+    outline: none;
+}
+
+#add-task-button {
+    border-radius: 20px;
+    padding: 6px 16px;
+    background-color : #61b390;
+    border: 1px solid black;
+    transform: translateX(50px);
+
+}
+
+#input-task {
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 6px 12px;
+    background: #bad8b6;
+}
+
+#task-list {
+    border-radius: 16px;
+    padding: 10px;
+    background: #bad8b6;
+}
+
+.delete-btn {
+    border-radius: 50%;
+}
+
+.capsule {
+    border-radius: 999px;
+}
+
+#push-notification {
+    border-radius: 20px;
+}
+
+main section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(186, 216, 182, 0.9); /*rgbAlfa*/
+    border-radius: 16px;
+    border: 1px solid #000;
+}
+
+main section h2 {
+    margin-top: 0;
+    font-family: cursive;
+}
+
+footer .social-links {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .social-links a.capsule {
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+}
+
+footer .social-links a.capsule img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* move menu */
+
+#side-menu {
+    position: fixed;
+    top: 0;
+    left: -220px;
+    width: 220px;
+    height: 100%;
+    background: #025f4c;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s;
+    z-index: 200;
+}
+
+#side-menu.open {
+    left: 0;
+}
+
+body.menu-open header,
+body.menu-open main,
+body.menu-open footer {
+    margin-left: 220px;
+    transition: margin 0.3s;
+}
+
+#menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 300;
+}
+header,
+main,
+footer {
+    transition: margin-left 0.3s ease;
+}
+
+body.menu-open header,
+body.menu-open main,
+body.menu-open footer {
+    margin-left: 220px;
+}

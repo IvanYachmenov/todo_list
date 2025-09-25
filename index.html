@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LifeHub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="capsule menu" id="menu-button">
+                <img src="img/list.png" alt="Menu">
+            </button>
+            <h1><span class="capsule">To-Do List</span></h1>
+        </div>
+
+        <div class="header-right">
+            <h5><span class="capsule">You don't have to be great to start, but you have to start to be great!</span></h5>
+        </div>
+    </header>
+
+
+    <nav id="side-menu">
+        <button id="close-menu">&times;</button>
+        <ul>
+            <li><a href="#list-section">List</a></li>
+            <li><a href="#info-section">Info</a></li>
+            <li><a href="#about-section">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="list-section">
+            <h2>Your To-Do List</h2>
+            <div class="task-input">
+                <input id="input-task">
+                <button id="add-task-button">Add</button>
+            </div>
+            <ul id="task-list"></ul>
+        </section>
+
+        <section id="info-section">
+            <h2>Info</h2>
+            <p>
+                This is a simple To-Do List application. You can add, complete, and delete tasks.
+                All tasks are saved in your browser's local storage, so they won't disappear when
+                you reload the page.
+            </p>
+            <p>
+                Mark tasks as completed using the checkbox, and delete tasks with the red ✖ button.
+                Stay productive and keep track of what matters!
+            </p>
+        </section>
+
+        <section id="about-section">
+            <h2>About</h2>
+            <p>
+                LifeHub To-Do List was created by me as a practice project to learn HTML, CSS, and JavaScript.
+                It demonstrates DOM manipulation, localStorage usage, and dynamic UI updates.
+            </p>
+            <p>
+                Future plans: add categories and deadlines!
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p><span class="capsule">© 2025 LifeHub (by kotik3131)</span></p>
+            <div class="social-links">
+                <a href="https://t.me/yachm_ivan" target="_blank" class="capsule">
+                    <img src="img/telegram.png" alt="Telegram">
+                </a>
+                <a href="https://discord.com/users/705280431108653118" target="_blank" class="capsule">
+                    <img src="img/discord.png" alt="Discord">
+                </a>
+                <a href="https://www.instagram.com/yachm.ivan/" target="_blank" class="capsule">
+                    <img src="img/instagram.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="push-notification">You have done it!</div>
+
+<script src="ui.js"></script>
+<script src="tasks.js"></script>
+</body>
+</html>
